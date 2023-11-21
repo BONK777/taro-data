@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "singularName": "task",
+    "pluralName": "tasks",
+    "displayName": "Task",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "term": {
+      "type": "component",
+      "repeatable": false,
+      "component": "task.task-duration"
+    },
+    "answerFormat": {
+      "type": "component",
+      "repeatable": false,
+      "component": "task.answer-format"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "tasks"
+    },
+    "subCategory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sub-category.sub-category",
+      "inversedBy": "task"
+    },
+    "answers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::answer.answer",
+      "mappedBy": "task"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_task_answer_formats",
+  "info": {
+    "displayName": "AnswerFormat"
+  },
+  "options": {},
+  "attributes": {
+    "format": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "audio",
+        "file",
+        "online"
+      ]
+    }
+  }
+}

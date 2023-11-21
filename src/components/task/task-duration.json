@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_task_task_durations",
+  "info": {
+    "displayName": "TaskTerm",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "term": {
+      "type": "enumeration",
+      "enum": [
+        "fast",
+        "day",
+        "anyTime"
+      ]
+    }
+  }
+}
